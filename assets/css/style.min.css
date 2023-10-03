@@ -2728,6 +2728,11 @@ body.version-two .blog-nag-margin {
     /* background-color: #fff */
 }
 
+.service-content li {
+    list-style: circle;
+    margin-left: 20px;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .single-service .service-content {
         padding: 50px 30px 30px 30px
@@ -2821,7 +2826,7 @@ body.version-two .blog-nag-margin {
     padding-top: 10px
 }
 
-.service-details-wrap .details-content .service-list li {
+.service-list li {
     padding-left: 80px;
     position: relative;
     min-height: 60px;
@@ -2829,20 +2834,20 @@ body.version-two .blog-nag-margin {
 }
 
 @media (max-width: 574px) {
-    .service-details-wrap .details-content .service-list li {
+    .service-list li {
         padding-left: 0
     }
 }
 
-.service-details-wrap .details-content .service-list li:last-child {
+.service-list li:last-child {
     margin-bottom: 0
 }
 
-.service-details-wrap .details-content .service-list li p {
+.service-list li p {
     margin-bottom: 0
 }
 
-.service-details-wrap .details-content .service-list li span.icon {
+.service-list li span.icon {
     position: absolute;
     left: 0;
     top: 50%;
@@ -2859,7 +2864,7 @@ body.version-two .blog-nag-margin {
 }
 
 @media (max-width: 574px) {
-    .service-details-wrap .details-content .service-list li span.icon {
+    .service-list li span.icon {
         display: none
     }
 }
@@ -3789,6 +3794,17 @@ body.version-two .blog-nag-margin {
         top: 20px
     }
 }
+.nav-tabs {
+    justify-content: center;
+}
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #009e68;
+}
+.nav-tabs .nav-link {
+    border-radius: 0;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
 
 .project-filter {
     text-align: center;
@@ -3828,6 +3844,10 @@ body.version-two .blog-nag-margin {
 }
 
 @media (max-width: 767px) {
+    .nav-tabs .nav-item {
+        width: 100%;
+        text-align: center;
+    }
     .project-filter ul li {
         display: block;
         margin: 0;
@@ -4013,27 +4033,31 @@ body.version-two .blog-nag-margin {
         margin-top: 100px
     }
 }
-
-.project-details-wrap .project-sidebar .widget {
+.project-sidebar {
+    width: 100%;
+}
+.project-sidebar .widget {
     padding: 55px 40px;
     background-color: #f0f8f4;
     position: relative;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.176) 0px 1rem 3rem;
+    margin: 25px 25px 0;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .project-details-wrap .project-sidebar .widget {
+    .project-sidebar .widget {
         padding: 50px 30px
     }
 }
 
 @media (max-width: 574px) {
-    .project-details-wrap .project-sidebar .widget {
+    .project-sidebar .widget {
         padding: 40px 25px
     }
 }
 
-.project-details-wrap .project-sidebar .widget::before {
+.project-sidebar .widget::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -4043,7 +4067,7 @@ body.version-two .blog-nag-margin {
     background-color: #279e64
 }
 
-.project-details-wrap .project-sidebar .widget .widget-title {
+.project-sidebar .widget .widget-title {
     font-size: 24px;
     font-weight: 600;
     position: relative;
@@ -4052,18 +4076,18 @@ body.version-two .blog-nag-margin {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .project-details-wrap .project-sidebar .widget .widget-title {
+    .project-sidebar .widget .widget-title {
         font-size: 22px
     }
 }
 
 @media (max-width: 574px) {
-    .project-details-wrap .project-sidebar .widget .widget-title {
+    .project-sidebar .widget .widget-title {
         font-size: 22px
     }
 }
 
-.project-details-wrap .project-sidebar .widget .widget-title::after {
+.project-sidebar .widget .widget-title::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -4073,36 +4097,40 @@ body.version-two .blog-nag-margin {
     content: ''
 }
 
-.project-details-wrap .project-sidebar .widget.project-information ul li {
+.project-sidebar .widget.project-information ul li {
     font-size: 18px;
-    margin-bottom: 20px
+    margin-bottom: 10px
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .project-details-wrap .project-sidebar .widget.project-information ul li {
+    .project-sidebar .widget.project-information ul li {
         font-size: 16px
     }
 }
 
 @media (max-width: 574px) {
-    .project-details-wrap .project-sidebar .widget.project-information ul li {
+    .project-sidebar .widget.project-information ul li {
         font-size: 15px;
         margin-bottom: 10px
     }
 }
 
-.project-details-wrap .project-sidebar .widget.project-information ul li:last-child {
+.project-sidebar .widget.project-information ul li:last-child {
     margin-bottom: 0
 }
 
-.project-details-wrap .project-sidebar .widget.project-information ul li span {
+.project-sidebar .widget.project-information ul li span {
     font-weight: 700;
     color: #0a1026;
     padding-left: 5px
 }
+.project-sidebar .widget.project-information ul li {
+    color: #0a1026;
+    font-weight: 700;
+}
 
-.project-details-wrap .project-sidebar .widget.form-widget form input,
-.project-details-wrap .project-sidebar .widget.form-widget form textarea {
+.project-sidebar .widget.form-widget form input,
+.project-sidebar .widget.form-widget form textarea {
     width: 100%;
     height: 60px;
     background-color: #fff;
@@ -4111,49 +4139,49 @@ body.version-two .blog-nag-margin {
     margin-bottom: 10px
 }
 
-.project-details-wrap .project-sidebar .widget.form-widget form input,
-.project-details-wrap .project-sidebar .widget.form-widget form textarea,
-.project-details-wrap .project-sidebar .widget.form-widget form::-webkit-input-placeholder {
+.project-sidebar .widget.form-widget form input,
+.project-sidebar .widget.form-widget form textarea,
+.project-sidebar .widget.form-widget form::-webkit-input-placeholder {
     font-size: 15px;
     font-weight: 500;
     font-family: "Poppins", sans-serif
 }
 
-.project-details-wrap .project-sidebar .widget.form-widget form input,
-.project-details-wrap .project-sidebar .widget.form-widget form textarea,
-.project-details-wrap .project-sidebar .widget.form-widget form:-ms-input-placeholder {
+.project-sidebar .widget.form-widget form input,
+.project-sidebar .widget.form-widget form textarea,
+.project-sidebar .widget.form-widget form:-ms-input-placeholder {
     font-size: 15px;
     font-weight: 500;
     font-family: "Poppins", sans-serif
 }
 
-.project-details-wrap .project-sidebar .widget.form-widget form input,
-.project-details-wrap .project-sidebar .widget.form-widget form textarea,
-.project-details-wrap .project-sidebar .widget.form-widget form::-ms-input-placeholder {
+.project-sidebar .widget.form-widget form input,
+.project-sidebar .widget.form-widget form textarea,
+.project-sidebar .widget.form-widget form::-ms-input-placeholder {
     font-size: 15px;
     font-weight: 500;
     font-family: "Poppins", sans-serif
 }
 
-.project-details-wrap .project-sidebar .widget.form-widget form input,
-.project-details-wrap .project-sidebar .widget.form-widget form textarea,
-.project-details-wrap .project-sidebar .widget.form-widget form::placeholder {
+.project-sidebar .widget.form-widget form input,
+.project-sidebar .widget.form-widget form textarea,
+.project-sidebar .widget.form-widget form::placeholder {
     font-size: 15px;
     font-weight: 500;
     font-family: "Poppins", sans-serif
 }
 
-.project-details-wrap .project-sidebar .widget.form-widget form textarea {
+.project-sidebar .widget.form-widget form textarea {
     height: 120px;
     padding-top: 25px
 }
 
-.project-details-wrap .project-sidebar .widget.ad-widget {
+.project-sidebar .widget.ad-widget {
     padding: 0;
     background-color: transparent
 }
 
-.project-details-wrap .project-sidebar .widget.ad-widget::before {
+.project-sidebar .widget.ad-widget::before {
     display: none
 }
 
@@ -4579,34 +4607,12 @@ body.version-two .blog-nag-margin {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 80px;
-    color: #fff
+    padding: 20px;
+    color: #fff;
+    
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .appointment-section .appointment-text {
-        padding: 0 30px
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .appointment-section .appointment-text {
-        padding: 80px
-    }
-}
-
-@media (max-width: 767px) {
-    .appointment-section .appointment-text {
-        padding: 40px 30px
-    }
-}
-
-@media (max-width: 399px) {
-    .appointment-section .appointment-text {
-        padding: 40px 20px
-    }
-}
-
+/* 
 .appointment-section .appointment-text::before {
     position: absolute;
     left: 0;
@@ -4630,8 +4636,8 @@ body.version-two .blog-nag-margin {
     content: '';
     background-color: transparent;
     opacity: 0.13
-}
-
+} */
+/* 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .appointment-section .appointment-text::after {
         left: 15px;
@@ -4657,7 +4663,7 @@ body.version-two .blog-nag-margin {
         bottom: 10px;
         top: 10px
     }
-}
+} */
 
 .appointment-section .appointment-text .section-title h2,
 .appointment-section .appointment-text .section-title p {
