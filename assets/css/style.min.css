@@ -2833,12 +2833,6 @@ body.version-two .blog-nag-margin {
     margin-bottom: 20px
 }
 
-@media (max-width: 574px) {
-    .service-list li {
-        padding-left: 0
-    }
-}
-
 .service-list li:last-child {
     margin-bottom: 0
 }
@@ -2863,11 +2857,6 @@ body.version-two .blog-nag-margin {
     border-radius: 50%
 }
 
-@media (max-width: 574px) {
-    .service-list li span.icon {
-        display: none
-    }
-}
 
 .service-details-wrap .details-content p {
     margin-bottom: 30px
