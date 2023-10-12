@@ -1580,13 +1580,13 @@ body.version-two .blog-nag-margin {
 
 .hero-section .single-hero-slide .hero-content h1 {
     color: #fff;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 1.2
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .hero-section .single-hero-slide .hero-content h1 {
-        font-size: 64px
+        font-size: 60px
     }
 }
 
