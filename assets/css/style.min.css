@@ -7595,3 +7595,65 @@ footer.footer-two::after {
     background-color: #000;
     color: #fff
 }
+.video-container {
+    position: relative;
+    width: 370px; /* Set the desired width */
+    height: 667px; /* Set the desired height */
+  }
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure it's above the video */
+  }
+
+  .playButton {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: #279e64;
+    font-size: 30px;
+    line-height: 50px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+}
+.playButton i {
+    font-size: 22px;
+    color: #fff;
+    position: relative;
+    top: -2px;
+}
+.playButton::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    -webkit-animation: ripple-white 1s linear infinite;
+    animation: ripple-white 1s linear infinite;
+    border-radius: 50%
+}
+
+.playButton::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    -webkit-animation: ripple-white 1.5s linear infinite;
+    animation: ripple-white 1.5s linear infinite;
+    border-radius: 50%
+}
+.playButton.paused::before, .playButton.paused::after {
+    animation: none;
+    -webkit-animation: none;
+}
+video::-webkit-media-controls-play-button {
+    display: none;
+  }

@@ -110,6 +110,12 @@ $(function() {
 		// other options
 	});
 
+	$('.project-loop').magnificPopup({
+		delegate: 'a', 
+		type: 'image'
+		// other options
+	  });
+
 	//===== 08. Service area hover class
 	$('.service-loop').on('mouseover', '.single-service', function() {
 		$('.single-service').removeClass('active');
