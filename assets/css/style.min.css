@@ -6028,7 +6028,8 @@ body.version-two .blog-nag-margin {
     color: #0a1026;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    line-height: 1
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 574px) {
