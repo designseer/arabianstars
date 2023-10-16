@@ -3843,12 +3843,12 @@ body.version-two .blog-nag-margin {
         width: 100%;
         text-align: center;
     }
-    .project-filter ul li {
+    /* .project-filter ul li {
         display: block;
         margin: 0;
         text-align: left;
         padding: 5px
-    }
+    } */
     .project-filter ul li:last-child {
         margin-bottom: 0
     }
