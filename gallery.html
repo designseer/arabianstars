@@ -160,11 +160,24 @@
                           <button class="playButton" id="playButton3"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-4 col-sm-6 item-two mb-20">
-                        <a href="assets/img/g-01.jpg" class="img-link">
-                            <img src="assets/img/g-01.jpg">
-                        </a>
-                    </div> -->
+                    <div class="col-lg-4 col-sm-6 item-one mb-20">
+                        <div class="video-container">
+                        <video id="video4" width="370" height="667" controls poster="assets/img/poster-04.jpg">
+                            <source src="assets/img/v-04.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                          <button class="playButton" id="playButton4"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 item-one mb-20">
+                        <div class="video-container">
+                        <video id="video5" width="370" height="667" controls poster="assets/img/poster-05.jpg">
+                            <source src="assets/img/v-05.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                          <button class="playButton" id="playButton5"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-sm-6 item-two mb-20">
                         <a href="assets/img/g-08.jpg" class="img-link">
                             <img src="assets/img/g-08.jpg">
@@ -309,6 +322,12 @@
 
         var video3 = document.getElementById("video3");
         var playButton3 = document.getElementById("playButton3");
+
+        var video4 = document.getElementById("video4");
+        var playButton4 = document.getElementById("playButton4");
+
+        var video5 = document.getElementById("video5");
+        var playButton5 = document.getElementById("playButton5");
       
         playButton1.addEventListener("click", function() {
           togglePlayPause(video1, playButton1);
@@ -320,6 +339,14 @@
 
         playButton3.addEventListener("click", function() {
           togglePlayPause(video3, playButton3);
+        });
+
+        playButton4.addEventListener("click", function() {
+          togglePlayPause(video4, playButton4);
+        });
+
+        playButton5.addEventListener("click", function() {
+          togglePlayPause(video5, playButton5);
         });
 
         // var videoClick = document.getElementsByClassName(videoclick);
