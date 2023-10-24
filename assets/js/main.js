@@ -389,4 +389,9 @@ $(function() {
 		var phoneNumber = '+00971 9 501 2820'; // Replace with your desired phone number
 		window.location.href = 'tel:' + phoneNumber;
 	});
-});
+
+	$(function() {
+		ajaxContactForm();
+
+	});
+})(jQuery);
