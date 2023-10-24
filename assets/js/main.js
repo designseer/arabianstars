@@ -312,6 +312,53 @@ $(function() {
 		]
 	});
 
+	var ajaxContactForm = function() {  
+        $('#contactform').each(function() {
+            $(this).validate({
+                submitHandler: function( form ) {
+                    var $form = $(form),
+                        str = $form.serialize(),
+                        loading = $('<div />', { 'class': 'loading' });
+
+                    $.ajax({
+                        type: "POST",
+                        url:  $form.attr('action'),
+                        data: str,
+                        beforeSend: function () {
+                            $form.find('.form-submit').append(loading);
+                        },
+                        success: function( msg ) {
+                            var result, cls;                            
+                            if ( msg === 'Success' ) {                                
+                                result = 'Message Sent Successfully';
+                                cls = 'msg-success';
+                            } else {
+                                result = 'Error sending email.';
+                                cls = 'msg-error';
+                            }
+
+                            $form.prepend(
+                                $('<div />', {
+                                    'class': 'flat-alert ' + cls,
+                                    'text' : result
+                                }).append(
+                                    $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
+                                )
+                            );
+
+                            $form.find(':input').not('.submit').val('Sent');
+                        },
+                        complete: function (xhr, status, error_thrown) {
+                            $form.find('.loading').remove();
+                        }
+                    });
+                    // Prevent the default form submission
+                    return false;
+                }
+            });
+        }); // each contactform
+    };
+
 	//===== 20. Pricing area hover class
 	$('.pricing-loop').on('mouseover', '.pricing-box', function() {
 		$('.pricing-box.active').removeClass('active');

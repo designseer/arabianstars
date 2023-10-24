@@ -158,24 +158,19 @@
 							<div class="form-title bg-cover">
 								<h2>Request A Quote</h2>
 							</div>
-							<form action="#">
+							<form action="contact/contact-process-2.php" id="contactform" method="post" accept-charset="utf-8" class="form-submit contact-form wpcf7-form">
 								<div class="input-group mb-15">
-									<input type="text" placeholder="Your Name">
+									<input type="text" placeholder="Your Name"  id="name" name="name" value="" class="wpcf7-form-control name" required>
 									<span class="icon"><i class="far fa-user-edit"></i></span>
 								</div>
 								<div class="input-group mb-15">
-									<input type="text" placeholder="Your Email">
+									<input type="text" placeholder="Your Email" id="email" name="email" value="" class="wpcf7-form-control email" required>
 									<span class="icon"><i class="far fa-envelope-open"></i></span>
 								</div>
 								<div class="input-group mb-15">
-									<input type="text" placeholder="Subject">
-									<span class="icon"><i class="far fa-envelope-open"></i></span>
+									<textarea placeholder="Write a Message" name="message" required></textarea>
 								</div>
-								<div class="input-group mb-15">
-									<textarea placeholder="Write a Message"></textarea>
-								</div>
-								<button class="main-btn main-btn-3 text-white" type="submit"> Send Request <i
-										class="fal fa-plus"></i></button>
+								<input class="main-btn main-btn-3" type="submit" value="Submit">	
 							</form>
 						</div>
 					</div>
@@ -263,6 +258,7 @@
 	<!--====== jquery js ======-->
 	<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
 	<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="assets/js/vendor/jquery-validate.js"></script>
 	<!--====== Bootstrap js ======-->
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/popper.min.js"></script>
